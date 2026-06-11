@@ -7,6 +7,8 @@ public class LoadRegistrationApp {
     static String option = "";
 
     public static void run(){
+        clearTerminal();
+
         System.out.println("Dial *143# to access TM Services: ");
         System.out.print("Enter USSD: ");
         String userInput = sc.nextLine();
@@ -53,7 +55,7 @@ public class LoadRegistrationApp {
         };
 
         while(true) {
-            System.out.println("Regular Load: " + LoadBalance);
+            System.out.println("\nRegular Load: ₱" + LoadBalance);
 
             String[] listOfPromo = {"[1] Unli Call & Text", "[2] PawerSURF", "[3] EASYSURF", "[4] ALLSURF", "[5] EasyPLAN", "[6] Exit"};
 
@@ -91,7 +93,6 @@ public class LoadRegistrationApp {
     }
     public static void showSubMenu(Promo[] subPromos){
         while(true){
-
             for(Promo selection: subPromos){
                 System.out.println("["+selection.id+"] " + selection.promoName );
             }
@@ -121,10 +122,11 @@ public class LoadRegistrationApp {
         String message = "";
         System.out.println("*** " + promo.promoName + " ***");
         System.out.println("*** " + promo.promoDescription + " ***");
-
+        System.out.println("Regular Load: ₱" + LoadBalance);
         String[] surfPromo = {"[1] Subscribe", "[2] Back", "[3] Exit"};
 
         while (true) {
+
             for (String selection : surfPromo) {
                 System.out.println(selection);
             }
