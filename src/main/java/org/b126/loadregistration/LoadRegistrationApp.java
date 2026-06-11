@@ -93,6 +93,7 @@ public class LoadRegistrationApp {
     }
     public static void showSubMenu(Promo[] subPromos){
         while(true){
+            System.out.println();
             for(Promo selection: subPromos){
                 System.out.println("["+selection.id+"] " + selection.promoName );
             }
@@ -120,11 +121,11 @@ public class LoadRegistrationApp {
     }
     public static  void performRegistration(Promo promo) {
         String message = "";
-        System.out.println("*** " + promo.promoName + " ***");
-        System.out.println("*** " + promo.promoDescription + " ***");
+        System.out.printf("\n=== %s ===",promo.promoName);
+        System.out.printf("\n=== %s ===\n",promo.promoDescription);
         System.out.println("Regular Load: ₱" + LoadBalance);
-        String[] surfPromo = {"[1] Subscribe", "[2] Back", "[3] Exit"};
 
+        String[] surfPromo = {"[1] Subscribe", "[2] Back", "[3] Exit"};
         while (true) {
 
             for (String selection : surfPromo) {
