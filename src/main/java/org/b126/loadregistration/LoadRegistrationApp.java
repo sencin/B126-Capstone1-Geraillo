@@ -57,7 +57,7 @@ public class LoadRegistrationApp {
         while(true) {
             System.out.println("\nRegular Load: ₱" + LoadBalance);
 
-            String[] listOfPromo = {"[1] Unli Call & Text", "[2] PawerSURF", "[3] EASYSURF", "[4] ALLSURF", "[5] EasyPLAN", "[6] Exit"};
+            String[] listOfPromo = {"[1] Combo", "[2] PawerSURF", "[3] EASYSURF", "[4] ALLSURF", "[5] EasyPLAN", "[6] Exit"};
 
             for (String promo : listOfPromo) {
                 System.out.println(promo);
